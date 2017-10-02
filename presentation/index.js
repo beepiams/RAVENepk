@@ -9,6 +9,7 @@ import {
   CodePane,
   Deck,
   Fill,
+  Fit,
   Heading,
   Image,
   Layout,
@@ -41,7 +42,14 @@ const images = {
   city: require("../assets/raven_animal/raven_duo.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  markdown: require("../assets/markdown.png"),
+  drawing: require("../assets/raven_adriano_lyra.jpg"),
+
+
+feathers: require("../assets/feathers.jpg"),
+  signature: require("../assets/epk/RAVEN_signature.jpg"),
+  silks: require("../assets/epk/RAVEN_silks.jpg"),
+  birdcage: require("../assets/epk/raven_birdcage_bw.jpg"),
 };
 
 preloader(images);
@@ -64,24 +72,25 @@ export default class Presentation extends React.Component {
     return (
       <Deck controls={true} progress={"bar"} transition={["zoom", "fade"]} transitionDuration={500} theme={theme}>
 
-      <Slide transition={["zoom, fade"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
+      <Slide transition={["fade"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
         <Heading fit bold textColor="primary">RAVEN</Heading>
         {/* <Heading fit textFont="secondary" fit>Aerial. Dance. Theatre.</Heading> */}
 
     </Slide>
 
-<Slide>
-  <Text fill textFont="secondary" textColor="white" >
-
+<Slide transition={["fade"]} bgImage={images.signature.replace("/", "")} bgDarken={0.85}>
+  <Text fit textFont="secondary" textColor="white" >
     {/*Mission Statement?*/}
-  RAVEN infuses their aerial & ground performances with nuanced sophistication and electrifying power.
-  With extensive experience as choreographers and improvisors,
-  RAVEN performs in a wide assortment of venues and productions, running the gamut from corporate events, commercial video and still shoots, to nightclubs, concerts, immersive theatre, proscenium productions, and variety.
+  Once upon a midnight dreary...
 </Text>
 </Slide>
 
-  <Slide transition={["fade"]} bgImage={images.city.replace("/", "")} bgDarken={0.85}>
+  <Slide transition={["fade"]} bgImage={images.signature.replace("/", "")} bgDarken={0.33} />
+  <Slide transition={["fade"]} bgImage={images.birdcage.replace("/", "")} bgDarken={0.67} />
+  <Slide transition={["fade"]} bgImage={images.silks.replace("/", "")} bgDarken={0.33} />
 
+  {/* <Slide transition={["fade"]} bgImage={images.city.replace("/", "")} bgDarken={0.85}> */}
+<Slide transition={["fade"]} bgImage={images.silks.replace("/", "")} bgDarken={0.75}>
   <Heading fit>SERVICES</Heading>
 
 <Text fill textFont="secondary" textColor="white">Feature & Ambient</Text>
@@ -93,124 +102,135 @@ export default class Presentation extends React.Component {
 <ListItem>Dance</ListItem>
 </List>
 
+
+//STUFF DONE
+corporate events, commercial video and still shoots, to nightclubs, concerts, immersive theatre, proscenium productions, and variety.
+
 <Text fill textFont="secondary" textColor="white">Stage</Text>
 <List fit textFont="secondary">
 
 </List>
 
-<FontAwesome className='white' name='clock-o' rotate={90} size='2x'
+<FontAwesome className='white' name='clock-o' rotate={90} size='1x'
     style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
   />
   <Text fill textColor="white">15-60 min</Text>
-
-
       {/*<Heading>Theater & Dance Collaboration</Heading> */}
-
-
 </Slide>
 
-  <Slide align="center center" transition={["fade"]} bgColor="primary">
+  <Slide align="center center" transition={["fade"]} bgImage={images.drawing.replace("/", "")} bgDarken={0.95}>
   <Heading margin="0 0 20px 0" caps fit>apparatus</Heading>
 
+
   <Layout fit>
-    <Fill >
-      {/* <Link href="http://biang-nyc.com"> */}
-    {/* <Image src={images.biang.replace("/", "")} width="50%" height="50%"></Image> */}
-    <FontAwesome className='white' name='opera' size='3x'
+    <Fill>
+    {/* <Link href="http://milkbarstore.com"> */}
+    {/* <Image src={images.milkbar.replace("/", "")} width="50%" height="50%" ></Image> */}
+  <Text textAlign="left" margin="0 0 10px 0" bold italic textColor="quartenary">
+    <FontAwesome className='white' name='institution' size='1x'
         style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
       />
-      <Text margin="0 0 10px 0" caps textColor="white">
+          Birdcage
+        </Text>
+        {/* </Link> */}
+    </Fill>
+    <Fill>
+    {/* <Link href="http://www.ilpostoaccantonyc.com"> */}
+    {/* <Image src={images.ilposto.replace("/", "")}  width="50%" height="50%"></Image> */}
+  <Text textAlign="right" margin="0 0 10px 0"  bold italic textColor="quartenary">
+
+        Corde Lisse
+        <FontAwesome className='white' name='road' size='1x'
+            style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+          />
+        </Text>
+
+        {/* </Link> */}
+    </Fill>
+      </Layout>
+        <Layout fit>
+    <Fill>
+
+      {/* <Link href="http://milkbarstore.com"> */}
+      {/* <Image src={images.milkbar.replace("/", "")} width="50%" height="50%" ></Image> */}
+        <Text textAlign="left" margin="0 0 10px 0" bold italic textColor="quartenary">
+      <FontAwesome className='white' name='cube' size='1x'
+          style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+        />
+            Cubit
+          </Text>
+          {/* </Link> */}
+    </Fill>
+
+
+    <Fill>
+      <Text textAlign="right" margin="0 0 10px 0"  bold italic textColor="quartenary">
+    {/* <Link href="http://www.abraconyc.com"> */}
+    {/* <Image src={images.abraco.replace("/", "")}  width="100%" height="50%"></Image> */}
+
+          Hammock
+          <FontAwesome className='white' name='leaf' rotate={180} size='1x'
+              style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+            />
+        </Text>
+        {/* </Link> */}
+    </Fill>
+    </Layout>
+        <Layout fit>
+    <Fill>
+      {/* <Link href="http://biang-nyc.com"> */}
+    {/* <Image src={images.biang.replace("/", "")} width="50%" height="50%"></Image> */}
+      <Text textAlign="left" margin="0 0 10px 0" bold italic textColor="quartenary">
+    <FontAwesome className='primary'  name='opera' size='1x'
+        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+      />
+
         LYRA
       </Text>
       {/* </Link> */}
     </Fill>
     <Fill>
-    {/* <Link href="http://www.cafemogador.com"> */}
-    {/* <Image src={images.mogador.replace("/", "")} width="100%" height="50%"></Image> */}
-    <FontAwesome  className='white' name='fire' rotate={180} size='3x'
-          style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-        />
-        <Text margin="0 0 10px 0" caps textColor="white">
-          Tissu
-        </Text>
-        {/* </Link> */}
-    </Fill>
-
-    <Fill>
-    {/* <Link href="http://www.ilpostoaccantonyc.com"> */}
-    {/* <Image src={images.ilposto.replace("/", "")}  width="50%" height="50%"></Image> */}
-    <FontAwesome className='white' inverse={true} name='road' size='3x'
-        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-      />
-        <Text margin="0 0 10px 0"  caps textColor="white">
-        Corde Lisse
+    {/* <Link href="http://milkbarstore.com"> */}
+    {/* <Image src={images.milkbar.replace("/", "")} width="50%" height="50%" ></Image> */}
+  <Text textAlign="right" margin="0 0 10px 0" bold italic textColor="quartenary">
+          NET
+          <FontAwesome className='white' name='table' size='1x'
+              style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+            />
         </Text>
         {/* </Link> */}
     </Fill>
   </Layout>
-  <Layout fit >
-    <Fill>
-    {/* <Link href="http://www.mudnyc.com"> */}
-    {/* <Image src={images.mud.replace("/", "")}  width="50%" height="50%"></Image> */}
-    <FontAwesome className='white' rotate={90} name='random' size='3x'
-        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-      />
-        <Text margin="0 0 10px 0"  caps textColor="white">
-        Spansets
-        </Text>
-        {/* </Link> */}
-    </Fill>
+      <Layout fit>
+
   <Fill>
-  {/* <Link href="http://www.abraconyc.com"> */}
-  {/* <Image src={images.abraco.replace("/", "")}  width="100%" height="50%"></Image> */}
-  <FontAwesome className='white' name='leaf' rotate={180} size='3x'
+  {/* <Link href="http://www.mudnyc.com"> */}
+  {/* <Image src={images.mud.replace("/", "")}  width="50%" height="50%"></Image> */}
+  <Text textAlign="left" margin="0 0 10px 0"  bold italic textColor="quartenary">
+  <FontAwesome className='white' rotate={90} name='random' size='1x'
       style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
     />
-      <Text margin="0 0 10px 0"  caps textColor="white">
-        Hammock
+      Spansets
       </Text>
       {/* </Link> */}
   </Fill>
+
+
   <Fill>
-  {/* <Link href="http://milkbarstore.com"> */}
-  {/* <Image src={images.milkbar.replace("/", "")} width="50%" height="50%" ></Image> */}
-  <FontAwesome className='white' name='table' size='3x'
-      style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-    />
-      <Text margin="0 0 10px 0" caps textColor="white">
-        NET
-      </Text>
+  {/* <Link href="http://www.cafemogador.com"> */}
+  {/* <Image src={images.mogador.replace("/", "")} width="100%" height="50%"></Image> */}
+
+<Text textAlign="right"margin="0 0 10px 0" bold italic textColor="quartenary">
+        Tissu
+      <FontAwesome  className='white' name='fire' rotate={180} size='1x'
+            style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+          />
+          </Text>
       {/* </Link> */}
   </Fill>
+
 </Layout>
-<Layout fit>
-  <Fill>
-  {/* <Link href="http://milkbarstore.com"> */}
-  {/* <Image src={images.milkbar.replace("/", "")} width="50%" height="50%" ></Image> */}
-  <FontAwesome className='white' name='cube' size='3x'
-      style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-    />
-      <Text margin="0 0 10px 0" caps textColor="white">
-        Cubit
-      </Text>
-      {/* </Link> */}
-  </Fill>
-  <Fill >
-  {/* <Link href="http://milkbarstore.com"> */}
-  {/* <Image src={images.milkbar.replace("/", "")} width="50%" height="50%" ></Image> */}
-  <FontAwesome className='white' name='institution' size='3x'
-      style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-    />
-      <Text margin="0 0 10px 0" caps textColor="white">
-        Birdcage
-      </Text>
-      {/* </Link> */}
-  </Fill>
-
-  </Layout>
-
-
-
+  <Heading margin="20px 0 0 0" caps fit>options</Heading>
 </Slide>
 
 <Slide>
@@ -254,7 +274,7 @@ False Awakening
   <Text textFont="secondary" textColor="white" fit>  <FontAwesome
     className='white'
     name='envelope'
-    size='2x'
+    size='1x'
     style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
   />ravenkindness@gmail.com</Text>
 </Slide>
@@ -287,10 +307,10 @@ False Awakening
             <ListItem>Item 4</ListItem>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+        <Slide align="center center" transition={["fade"]} bgImage={images.feathers.replace("/", "")} bgDarken={0.15}>
+          <BlockQuote >
+            <Quote textColor="secondary">Example Quote</Quote>
+            <Cite textColor="tertiary">Author</Cite>
           </BlockQuote>
         </Slide>
       </Deck>
