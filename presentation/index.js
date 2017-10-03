@@ -38,18 +38,24 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-
   city: require("../assets/raven_animal/raven_duo.jpg"),
-
   logo: require("../assets/formidable-logo.svg"),
   markdown: require("../assets/markdown.png"),
   drawing: require("../assets/epk/raven_adriano_lyra.jpg"),
-
-
+  cubit: require("../assets/epk/RAVEN_cubit2.jpg"),
+  lyra: require("../assets/epk/Raven_lyra.jpg"),
   feathers: require("../assets/raven_animal/feathers_2.jpg"),
-  signature: require("../assets/epk/RAVEN_signature.jpg"),
-  silks: require("../assets/epk/RAVEN_silks.jpg"),
+  signature: require("../assets/epk/RAVEN_signature_bw.jpg"),
+  silks: require("../assets/epk/RAVEN_silks_re.jpg"),
   birdcage: require("../assets/epk/raven_birdcage_bw.jpg"),
+  birdcage2: require("../assets/epk/raven_birdcage.jpg"),
+
+  rig: require("../assets/epk/RAVEN_rig.jpg"),
+  houseofyes: require("../assets/epk/RAVEN_hoy.jpg"),
+  lc: require("../assets/epk/RAVEN_lc_bw.jpg"),
+
+
+    burning: require("../assets/_epk/RAVEN_burning_black.jpg"),
 };
 
 preloader(images);
@@ -84,14 +90,16 @@ export default class Presentation extends React.Component {
 
 {/* Slideshow */}
   <Slide transition={["fade"]} bgImage={images.signature.replace("/", "")} bgDarken={0.33} />
-  <Slide transition={["fade"]} bgImage={images.birdcage.replace("/", "")} bgDarken={0.67} />
   <Slide transition={["fade"]} bgImage={images.silks.replace("/", "")} bgDarken={0.33} />
+    <Slide transition={["fade"]} bgImage={images.rig.replace("/", "")} bgDarken={0.67} />
+      <Slide transition={["fade"]} bgImage={images.lc.replace("/", "")} bgDarken={0.67} />
 
-  <Slide transition={["fade"]} bgImage={images.feathers.replace("/", "")} bgDarken={0.67}>
+{/* Services */}
+  <Slide transition={["fade"]} bgImage={images.feathers.replace("/", "")} bgDarken={0.75}>
       <Heading caps textColor="secondary">SERVICES</Heading>
   </Slide>
 
-  <Slide transition={["fade"]} bgImage={images.silks.replace("/", "")} bgDarken={0.75}>
+  <Slide transition={["fade"]} bgImage={images.lyra.replace("/", "")} bgDarken={0.75}>
       <Heading fill caps textColor="secondary">Feature</Heading>
         <Text fill caps italic textColor="secondary">Aerial Duo</Text>
         <Text fill caps italic textColor="secondary">Tandem Duo</Text>
@@ -105,28 +113,35 @@ export default class Presentation extends React.Component {
         <Text fill caps italic textColor="secondary">Dance</Text>
   </Slide>
 
-  <Slide transition={["fade"]} bgImage={images.silks.replace("/", "")} bgDarken={0.75}>
-    <Heading fill caps textColor="secondary">Stage Shows</Heading>
-      <Text fill caps italic textColor="secondary">Ranging froem 15-60 minutes</Text>
-    <Heading fit caps textColor="secondary">Theater & Dance Collaboration</Heading>
+  <Slide transition={["fade"]} bgImage={images.cubit.replace("/", "")} bgDarken={0.75}>
+    <Heading fit caps textColor="secondary">Stage Shows</Heading>
+      <Text fill caps italic textColor="secondary">  <FontAwesome className='white' name='clock-o' size='1x'
+            style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }} /> 5-60 minutes</Text>
+    <Heading margin="20px 0 0 0" fit caps textColor="secondary">Collaboration</Heading>
+    <Text fill caps italic textColor="secondary">Theater</Text>
+    <Text fill caps italic textColor="secondary">Dance</Text>
   </Slide>
 
-<Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-  <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-  <List>
-    <ListItem>corporate events</ListItem>
-    <ListItem>commercial video</ListItem>
-    <ListItem>still shoots</ListItem>
-    <ListItem>nightclubs</ListItem>
-    <ListItem>concerts</ListItem>
-    <ListItem>immersive theatre</ListItem>
-    <ListItem>proscenium productions</ListItem>
-    <ListItem>variety</ListItem>
-  </List>
+
+{/* EVENTS */}
+<Slide transition={["fade"]} bgColor="primary" textColor="secondary" bgImage={images.birdcage2.replace("/", "")} bgDarken={0.85}>
+  <Heading fit caps textColor="secondary" caps>OCCASIONS</Heading>
+
+    <Text textColor="secondary" italic>corporate events</Text>
+    <Text textColor="secondary" italic>commercial video</Text>
+    <Text textColor="secondary" italic>still shoots</Text>
+    <Text textColor="secondary" italic>nightclubs</Text>
+    <Text textColor="secondary" italic>concerts</Text>
+    <Text textColor="secondary" italic>immersive theatre</Text>
+    <Text textColor="secondary" italic>proscenium productions</Text>
+    <Text textColor="secondary" italic>variety</Text>
+
 </Slide>
 
-  <Slide align="center center" transition={["fade"]} bgImage={images.drawing.replace("/", "")} bgDarken={0.95}>
-    <Heading margin="0 0 20px 0" caps fit>apparatus</Heading>
+
+{/* Appaatus */}
+  <Slide align="center center" transition={["fade"]} bgImage={images.houseofyes.replace("/", "")} bgDarken={0.67}>
+    <Heading margin="0 0 20px 0" caps fit textColor="secondary">apparatus</Heading>
       <Layout fit>
         <Fill>
         {/* <Link href="http://milkbarstore.com"> */}
@@ -142,7 +157,6 @@ export default class Presentation extends React.Component {
         {/* <Link href="http://www.ilpostoaccantonyc.com"> */}
         {/* <Image src={images.ilposto.replace("/", "")}  width="50%" height="50%"></Image> */}
       <Text textAlign="right" margin="0 0 10px 0"  bold italic textColor="quartenary">
-
             Corde Lisse
             <FontAwesome className='white' name='road' size='1x'
                 style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }} />
@@ -151,7 +165,6 @@ export default class Presentation extends React.Component {
           </Layout>
             <Layout fit>
         <Fill>
-
           {/* <Link href="http://milkbarstore.com"> */}
           {/* <Image src={images.milkbar.replace("/", "")} width="50%" height="50%" ></Image> */}
             <Text textAlign="left" margin="0 0 10px 0" bold italic textColor="quartenary">
@@ -223,7 +236,7 @@ export default class Presentation extends React.Component {
       </Fill>
 
     </Layout>
-      <Heading margin="20px 0 0 0" caps fit>options</Heading>
+      <Heading margin="20px 0 0 0" caps fit textColor="secondary">options</Heading>
     </Slide>
 
 <Slide>
@@ -249,48 +262,28 @@ False Awakening
   <ListItem>Diamond Horseshoe</ListItem>
 </List>
 
-  <Text>TV & Commercial</Text>
+  <Heading>TV & Commercial</Heading>
     <List>
     <ListItem>Casual Films - commercial shoot</ListItem>
     <ListItem>Younger (TV Land)</ListItem>
     </List>
 </Slide>
 
-<Slide>
+<Slide align="left center" bgImage={images.burning.replace("/", "")} bgDarken={0.75}>
 
-  <Text textFont="secondary" textColor="white" fit>
+  <Text textAlign="right" italic textFont="secondary" textColor="white">
     <FontAwesome className='white' name='instagram' size='1x'
         style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
       />
        ravenkindness
   </Text>
-  <Text textFont="secondary" textColor="white" fit>  <FontAwesome
+  <Text textAlign="right" italic textFont="secondary" textColor="white">  <FontAwesome
     className='white'
     name='envelope'
     size='1x'
     style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
   />ravenkindness@gmail.com</Text>
 </Slide>
-
-
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
-          </Heading>
-          <Text margin="10px 0 0" textColor="quartenary" size={1} fit bold>
-            open the presentation/index.js file to get started
-          </Text>
-        </Slide>
-
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
-        </Slide>
 
 
       </Deck>
