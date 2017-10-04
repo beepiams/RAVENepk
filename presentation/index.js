@@ -120,9 +120,11 @@ export default class Presentation extends React.Component {
          {/* <FontAwesome className='white' name='clock-o' size='1x'
             style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }} />  */}
             15-60 minutes</Text>
-    <Heading margin="20px 0 0 0" fit caps textColor="secondary">Collaboration</Heading>
-    <Text fill caps italic textColor="secondary">Theater</Text>
-    <Text fill caps italic textColor="secondary">Dance</Text>
+
+
+    <Heading fit caps margin="20px 0 0 0" textColor="secondary">Original Productions</Heading>
+    <Text fill caps italic textColor="secondary">The Chicago Party</Text>
+    <Text fill caps italic textColor="secondary">False Awakening</Text>
   </Slide>
 
 
@@ -209,6 +211,7 @@ export default class Presentation extends React.Component {
     <Text textColor="secondary" italic>immersive theatre</Text>
     <Text textColor="secondary" italic>proscenium productions</Text>
     <Text textColor="secondary" italic>variety</Text>
+    <Text textColor="secondary" italic>TV & Commercial</Text>
 
 </Slide>
 
@@ -230,16 +233,7 @@ export default class Presentation extends React.Component {
   <Text fit textColor="secondary">The Slipper Room</Text>
 </Slide>
 
-  <Slide transition={["fade"]} bgImage={images.feathers.replace("/", "")} bgDarken={0.67}>
-  <Heading fit>TV & Commercial</Heading>
 
-    <Text fit textColor="secondary">Casual Films - commercial shoot</Text>
-    <Text fit textColor="secondary">Younger (TV Land)</Text>
-
-<Heading fit>Shows</Heading>
-<Text fit textColor="secondary">The Chicago Party</Text>
-<Text fit textColor="secondary">False Awakening</Text>
-</Slide>
 
 {/* Contact Info */}
 <Slide align="left center" bgImage={images.burning.replace("/", "")} bgDarken={0.67}>
