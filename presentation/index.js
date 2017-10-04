@@ -219,18 +219,18 @@ export default class Presentation extends React.Component {
 
 
 {/* NIGHT CLUBS AND VARIETY - LOGO BADGE  */}
-  <Slide transition={["fade"]} bgImage={images.feathers.replace("/", "")} bgDarken={0.50}>
+  <Slide align="center center" transition={["fade"]} bgImage={images.feathers.replace("/", "")} bgDarken={0.50}>
   <Heading fit>Nightclubs​ ​&​ ​Variety</Heading>
-  <Text fit textColor="secondary">The Box: NYC | UK</Text>
-  <Text fit textColor="secondary">Blunderland</Text>
-  <Text fit textColor="secondary">Diamond Horseshoe</Text>
-  <Text fit textColor="secondary">The House of YES</Text>
-  <Text fit textColor="secondary">Lightning Society</Text>
-  <Text fit textColor="secondary">Little Cinema</Text>
-  <Text fit textColor="secondary">El Ministerio De La Parranda</Text>
-  <Text fit textColor="secondary">No Holds Barred</Text>
-  <Text fit textColor="secondary">Que Bajo?!</Text>
-  <Text fit textColor="secondary">The Slipper Room</Text>
+  <Text fill textColor="secondary">The Box: NYC | UK</Text>
+  <Text fill textColor="secondary">Blunderland</Text>
+  <Text fill textColor="secondary">Diamond Horseshoe</Text>
+  <Text fill textColor="secondary">The House of YES</Text>
+  <Text fill textColor="secondary">Lightning Society</Text>
+  <Text fill textColor="secondary">Little Cinema</Text>
+  <Text fill textColor="secondary">El Ministerio De La Parranda</Text>
+  <Text fill textColor="secondary">No Holds Barred</Text>
+  <Text fill textColor="secondary">Que Bajo?!</Text>
+  <Text fill textColor="secondary">The Slipper Room</Text>
 </Slide>
 
 
