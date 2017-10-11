@@ -3,23 +3,14 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  Appear,
   BlockQuote,
-  Cite,
-  CodePane,
   Deck,
   Fill,
-  Fit,
   Heading,
-  Image,
   Layout,
   Link,
-  ListItem,
-  List,
-  Markdown,
   Quote,
   Slide,
-  Spectacle,
   Text
 } from "spectacle";
 
@@ -41,12 +32,7 @@ const images = {
   city: require("../assets/raven_animal/raven_duo.jpg"),
   markdown: require("../assets/markdown.png"),
   drawing: require("../assets/epk/raven_adriano_lyra.jpg"),
-
   birdcage: require("../assets/epk/raven_birdcage_bw.jpg"),
-
-
-
-
   birdcage2: require("../assets/_epk/birdcage.jpg"),
   lyra: require("../assets/_epk/lyra.jpg"),
   feathers: require("../assets/raven_animal/feathers_2.jpg"),
@@ -56,7 +42,7 @@ const images = {
   silks: require("../assets/_epk/silks.jpg"),
   rig: require("../assets/_epk/rig.jpg"),
   burning: require("../assets/_epk/burning_black.jpg"),
-  lc: require("../assets/_epk/lc.jpg"),
+  lc: require("../assets/_epk/lc.jpg")
 };
 
 preloader(images);
@@ -77,7 +63,7 @@ const theme = createTheme({
 export default class Presentation extends React.Component {
   render() {
     return (
-  <Deck controls={true} progress={"bar"} transition={["fade"]} transitionDuration={500} theme={theme}>
+  <Deck progress={"bar"} transition={["fade"]} transitionDuration={500} theme={theme}>
 
       <Slide transition={["fade"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
         <Heading fit bold textColor="primary">RAVEN</Heading>
@@ -134,65 +120,73 @@ export default class Presentation extends React.Component {
         <Layout fit>
           <Fill>
         <Text textAlign="left" margin="0 0 10px 0" bold italic textColor="secondary">
-          <FontAwesome className='white' name='institution' size='1x'
-              style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }} />
+          <FontAwesome className="white" name="institution" size="1x"
+            style={{ textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" }}
+          />
                 Birdcage
               </Text>
           </Fill>
           <Fill>
-      <Text textAlign="right" margin="0 0 10px 0"  bold italic textColor="secondary">
+      <Text textAlign="right" margin="0 0 10px 0" bold italic textColor="secondary">
               Corde Lisse
-              <FontAwesome className='white' name='road' size='1x'
-                  style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }} />
+              <FontAwesome className="white" name="road" size="1x"
+                style={{ textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" }}
+              />
               </Text>
           </Fill>
             </Layout>
               <Layout fit>
           <Fill>
               <Text textAlign="left" margin="0 0 10px 0" bold italic textColor="secondary">
-            <FontAwesome className='white' name='cube' size='1x'
-                style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }} />
+            <FontAwesome className="white" name="cube" size="1x"
+              style={{ textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" }}
+            />
                   Cubit
                 </Text>
           </Fill>
           <Fill>
-            <Text textAlign="right" margin="0 0 10px 0"  bold italic textColor="secondary">
+            <Text textAlign="right" margin="0 0 10px 0" bold italic textColor="secondary">
                 Hammock
-                <FontAwesome className='white' name='leaf' rotate={180} size='1x'
-                    style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }} />
+                <FontAwesome className="white" name="leaf" size="1x" rotate={180}
+                  style={{ textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" }}
+                />
               </Text>
           </Fill>
           </Layout>
               <Layout fit>
           <Fill>
                   <Text textAlign="left" margin="0 0 10px 0" bold italic textColor="secondary">
-          <FontAwesome className='primary'  name='opera' size='1x'
-              style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }} />
+          <FontAwesome className="primary" name="opera" size="1x"
+            style={{ textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" }}
+          />
               LYRA
             </Text>
           </Fill>
           <Fill>
         <Text textAlign="right" margin="0 0 10px 0" bold italic textColor="secondary">
                 NET
-                <FontAwesome className='white' name='table' size='1x'
-                    style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }} />
+                <FontAwesome className="white" name="table" size="1x"
+                  style={{ textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" }}
+                />
               </Text>
           </Fill>
         </Layout>
     <Layout fit>
         <Fill>
-      <Text textAlign="left" margin="0 0 10px 0"  bold italic textColor="secondary">
-        <FontAwesome className='white' rotate={90} name='random' size='1x'
-            style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }} />
+      <Text textAlign="left" margin="0 0 10px 0" bold italic textColor="secondary">
+        <FontAwesome className="white" rotate={90} name="random" size="1x"
+          style={{ textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" }}
+        />
             Spansets
             </Text>
         </Fill>
         <Fill>
     <Text textAlign="right"margin="0 0 10px 0" bold italic textColor="secondary">
               Tissu
-            <FontAwesome  className='white' name='fire' rotate={180} size='1x'
-                  style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }} />
-                </Text>
+            <FontAwesome className="white" name="fire" rotate={180} size="1x"
+              style={{ textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" }}
+            />
+    </Text>
         </Fill>
       </Layout>
         <Heading margin="20px 0 0 0" caps fit textColor="secondary">options</Heading>
@@ -216,8 +210,6 @@ export default class Presentation extends React.Component {
 </Slide>
 
 
-
-
 {/* NIGHT CLUBS AND VARIETY - LOGO BADGE  */}
   <Slide align="center center" transition={["fade"]} bgImage={images.feathers.replace("/", "")} bgDarken={0.50}>
   <Heading fit>Nightclubs​ ​&​ ​Variety</Heading>
@@ -234,32 +226,30 @@ export default class Presentation extends React.Component {
 </Slide>
 
 
-
 {/* Contact Info */}
 <Slide align="left center" bgImage={images.burning.replace("/", "")} bgDarken={0.67}>
     <Link href="http://www.instagram.com/ravenkindness" _blank >
   <Text textAlign="right" italic textFont="secondary" textColor="white">
-    <FontAwesome className='white' name='instagram' size='1x'
-        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-      />
+    <FontAwesome className="white" name="instagram" size="1x"
+      style={{ textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" }}
+    />
        ravenkindness
   </Text>
 </Link>
   <Link href="http://www.kindnessofravens.com" _blank>
   <Text textAlign="right" italic textFont="secondary" textColor="white">
-    <FontAwesome className='white' name='globe' size='1x'
-        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-      />
+    <FontAwesome className="white" name="globe" size="1x"
+      style={{ textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" }}
+    />
        kindnessofravens.com
   </Text>
 </Link>
 <Link href="mailto:ravenkindness@gmail.com" _blank>
-  <Text textAlign="right" italic textFont="secondary" textColor="white">  <FontAwesome
-    className='white'
-    name='envelope'
-    size='1x'
-    style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
-  />ravenkindness@gmail.com</Text>
+  <Text textAlign="right" italic textFont="secondary" textColor="white">
+    <FontAwesome className="white" name="envelope" size="1x"
+      style={{ textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" }}
+    />
+  ravenkindness@gmail.com</Text>
 </Link>
 </Slide>
       </Deck>
